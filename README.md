@@ -55,6 +55,7 @@
 
 ```text
 back_servlet/
+├── 2132/                     # [WS 02] 영화 관리 서블릿 및 DTO 실습 (Maven/Servlet 환경)
 ├── 3174/                     # [WS 01-b] 서블릿 생성 및 web.xml / @WebServlet 등록 실습
 │   ├── src/main/java/        # 서블릿 컨트롤러 및 Java 소스
 │   ├── src/main/webapp/      # web.xml, index.html 및 웹 리소스
@@ -65,7 +66,10 @@ back_servlet/
 │   └── pom.xml
 ├── BE_01/                    # 서블릿 기본 Dynamic Web Project 구조 실습
 ├── BE_01_maven/              # Maven 기반 Servlet 기본 환경 설정 및 실행
-├── BE_03_lab/                # Servlet LifeCycle, Filter, Listener 및 MainController 실습
+├── BE_03_lab/                # Servlet LifeCycle, Filter, Listener, ControllerHelper(forward/redirect) 및 구구단 실습
+├── BE_04_lab/                # EL/JSTL, Filter/Listener, 회원 관리(Member) Controller 및 View 연동 실습
+├── Backend_Example/          # [모의 실습] 자동차 관리 시스템 실습 프로젝트 (로그인, 차량 등록 및 목록 조회)
+├── Backend_Example_sol/      # [풀이/솔루션] 자동차 관리 시스템 완성 솔루션 (쿠키 Remember-Me, 세션 인증 처리)
 ├── backend-servlet/          # 백엔드 서블릿 종합 실습 및 공통 모듈
 ├── servlet_jsp/              # Servlet & JSP 연계 기초 실습
 ├── Servers/                  # Eclipse 로컬 Tomcat 서버 구성 파일
@@ -85,12 +89,12 @@ back_servlet/
 | :---: | :--- | :--- | :---: |
 | **3174** | `WS 01-b` | • 서블릿 기본 생성 및 매핑<br/>• `web.xml` 배포 서술자 등록 및 `@WebServlet` 어노테이션 매핑 실습 | ✅ 완료 |
 | **3175** | `WS 01-c` | • Servlet 라이프사이클 메서드(`init`, `service`, `destroy`) 동작 확인<br/>• `doGet()`과 `doPost()` 요청 방식에 따른 파라미터 수신 및 분기 처리 | ✅ 완료 |
+| **2132** | `WS 02` | • 영화 정보 관리 웹 애플리케이션 환경 구성<br/>• `pom.xml` war 패키징 및 Jakarta Servlet/JSP 의존성 설정 | ✅ 진행 중 |
 | **Lab 01** | `BE_01_maven` | • Maven을 활용한 Servlet/JSP 웹 프로젝트 설정<br/>• `jakarta.servlet` 라이브러리 연동 및 구동 | ✅ 완료 |
-| **Lab 03** | `BE_03_lab` | • 서블릿 생명주기 상세 검증<br/>• 공통 인코딩/로그 처리를 위한 `Filter` 구현<br/>• 컨텍스트 초기화 처리를 위한 `ServletContextListener`<br/>• `MainController`를 통한 단일 진입점 라우팅 실습 | ✅ 완료 |
-| *진행 예정* | *WS 02-x* | • JSP 기본 문법 (Scriptlet, Expression, Directive)<br/>• 내장 객체 (`request`, `response`, `session`, `application`) 활용 | ⏳ 대기 |
-| *진행 예정* | *WS 03-x* | • EL(Expression Language) 및 JSTL 태그 라이브러리 활용<br/>• 화면(View) 영역의 Java 코드 배제 및 가독성 개선 | ⏳ 대기 |
-| *진행 예정* | *WS 04-x* | • MVC 패턴 기반 웹 애플리케이션 구조화<br/>• Front Controller 패턴 및 Request Forward / Redirect 제어 | ⏳ 대기 |
-| *진행 예정* | *WS 05-x* | • JDBC 드라이버 로딩 및 `ConnectionPool`(DBCP) 연동<br/>• DAO / DTO 기반 데이터 영속성 계층 구현 | ⏳ 대기 |
+| **Lab 03** | `BE_03_lab` | • `ControllerHelper` 인터페이스 구현 (`forward`, `redirect` 유틸)<br/>• `MainController` 구구단 비즈니스 로직 연동 및 예외 처리(404, NumberFormatException)<br/>• JSP 기본 문법(`today.jsp` 스크립트릿, 표현식, 선언부) 및 폼 연동 | ✅ 완료 |
+| **Lab 04** | `BE_04_lab` | • EL(Expression Language) 문법 및 내장 객체, 연산자 실습<br/>• JSTL(`c:if`, `c:forEach` 등) 태그 라이브러리를 활용한 뷰 구현<br/>• 회원 관리(`MemberController`, Service, DAO) 및 공통 필터/리스너 연동 | ✅ 완료 |
+| **Exam** | `Backend_Example` | • 자동차 관리 시스템 종합 실습 (MVC 패턴 구조화)<br/>• 세션 기반 로그인 인증 및 쿠키 기반 `Remember-Me` 구현<br/>• 자동차 등록(`regist`) 및 목록 조회(`list`) 비즈니스 로직 작성 | ✅ 완료 |
+| **Solution** | `Backend_Example_sol` | • 자동차 관리 시스템 모범 답안 및 완성형 솔루션 코드 | ✅ 완료 |
 
 <br/>
 
