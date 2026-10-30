@@ -20,7 +20,9 @@ public interface ControllerHelper {
     }
 
     //TODO :  다음 디폴트 메소드를 완성하세요. (사용 여부는 자유)
-    public default void redirect(HttpServletRequest request, HttpServletResponse response, String path) throws IOException {}
+    public default void redirect(HttpServletRequest request, HttpServletResponse response, String path) throws IOException {
+    	response.sendRedirect(request.getContextPath()+path);
+    }
 
     //TODO :  다음 디폴트 메소드를 완성하세요. (사용 여부는 자유)
     public default void forward(HttpServletRequest request, HttpServletResponse response, String path) throws ServletException, IOException {

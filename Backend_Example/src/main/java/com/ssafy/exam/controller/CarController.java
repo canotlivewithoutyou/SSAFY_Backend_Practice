@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/member")
+@WebServlet({"/member", "/car"})
 public class CarController extends HttpServlet implements ControllerHelper {
 
 	private final CarService mService = CarServiceImpl.getService();
@@ -43,6 +43,15 @@ public class CarController extends HttpServlet implements ControllerHelper {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+			String action = getActionParameter(request, response);
+			switch(action){
+			
+			case "index" -> redirect(request, response, "/index.jsp");
+			case "login" -> login(request, response);
+			case "regist" -> regist(request, response);
+			default -> response.sendError(HttpServletResponse.SC_NOT_FOUND);
+			}
+			
 
 	}
 
