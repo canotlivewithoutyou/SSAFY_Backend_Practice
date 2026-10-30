@@ -68,8 +68,11 @@ back_servlet/
 ├── BE_01_maven/              # Maven 기반 Servlet 기본 환경 설정 및 실행
 ├── BE_03_lab/                # Servlet LifeCycle, Filter, Listener, ControllerHelper(forward/redirect) 및 구구단 실습
 ├── BE_04_lab/                # EL/JSTL, Filter/Listener, 회원 관리(Member) Controller 및 View 연동 실습
-├── Backend_Example/          # [모의 실습] 자동차 관리 시스템 실습 프로젝트 (로그인, 차량 등록 및 목록 조회)
+├── BE_05_lab/                # 서블릿 필터(Logging, Session, XSS, Error) 및 리스너, 세션 인증 회원 관리 실습
+├── BE_06_Project_sol/        # [종합 솔루션] 페이징(Page) 및 동적 검색(SearchCondition) 포함 회원 관리 완성 프로젝트
+├── Backend_Example/          # [모의 실습] 자동차 관리 시스템 실습 프로젝트 (URL 매핑, 라우팅, redirect 헬퍼 구현)
 ├── Backend_Example_sol/      # [풀이/솔루션] 자동차 관리 시스템 완성 솔루션 (쿠키 Remember-Me, 세션 인증 처리)
+├── Backend_Example_v2/       # [모의 실습 v2] JDBC(DBUtil, DAO) 데이터베이스 연동 및 계층형 자동차 관리 시스템
 ├── backend-servlet/          # 백엔드 서블릿 종합 실습 및 공통 모듈
 ├── servlet_jsp/              # Servlet & JSP 연계 기초 실습
 ├── Servers/                  # Eclipse 로컬 Tomcat 서버 구성 파일
@@ -93,8 +96,11 @@ back_servlet/
 | **Lab 01** | `BE_01_maven` | • Maven을 활용한 Servlet/JSP 웹 프로젝트 설정<br/>• `jakarta.servlet` 라이브러리 연동 및 구동 | ✅ 완료 |
 | **Lab 03** | `BE_03_lab` | • `ControllerHelper` 인터페이스 구현 (`forward`, `redirect` 유틸)<br/>• `MainController` 구구단 비즈니스 로직 연동 및 예외 처리(404, NumberFormatException)<br/>• JSP 기본 문법(`today.jsp` 스크립트릿, 표현식, 선언부) 및 폼 연동 | ✅ 완료 |
 | **Lab 04** | `BE_04_lab` | • EL(Expression Language) 문법 및 내장 객체, 연산자 실습<br/>• JSTL(`c:if`, `c:forEach` 등) 태그 라이브러리를 활용한 뷰 구현<br/>• 회원 관리(`MemberController`, Service, DAO) 및 공통 필터/리스너 연동 | ✅ 완료 |
-| **Exam** | `Backend_Example` | • 자동차 관리 시스템 종합 실습 (MVC 패턴 구조화)<br/>• 세션 기반 로그인 인증 및 쿠키 기반 `Remember-Me` 구현<br/>• 자동차 등록(`regist`) 및 목록 조회(`list`) 비즈니스 로직 작성 | ✅ 완료 |
+| **Lab 05** | `BE_05_lab` | • 서블릿 필터(LoggingFilter, SessionFilter, XSSFilter, ErrorFilter) 구현<br/>• `MyContextListener`를 통한 웹 애플리케이션 라이프사이클 이벤트 처리<br/>• `AuthController` & `MemberController` 세션 기반 인증 및 회원 관리 흐름 완성 | ✅ 완료 |
+| **Lab 06 (Sol)** | `BE_06_Project_sol` | • `Page` 및 `SearchCondition` DTO를 활용한 동적 페이징 & 검색 기능 구현<br/>• 전 계층(Controller - Service - DAO) 연동 및 예외/에러 페이지 분기 처리<br/>• 서블릿/JSP 종합 프로젝트 완성형 솔루션 | ✅ 완료 |
+| **Exam** | `Backend_Example` | • 자동차 관리 시스템 종합 실습 (MVC 패턴 구조화)<br/>• 서블릿 다중 매핑(`@WebServlet`), `doPost` 라우팅 분기 및 `ControllerHelper.redirect()` 구현<br/>• 세션 로그인 인증, 쿠키 `Remember-Me`, 차량 등록 및 목록 조회 로직 완성 | ✅ 완료 |
 | **Solution** | `Backend_Example_sol` | • 자동차 관리 시스템 모범 답안 및 완성형 솔루션 코드 | ✅ 완료 |
+| **Exam v2** | `Backend_Example_v2` | • JDBC(`DBUtil`) 및 `CarDao/CarDaoImpl` 연동을 통한 데이터베이스 영속성 구현<br/>• 계층형 아키텍처(Controller - Service - DAO - DB) 기반 자동차 관리 시스템 구축<br/>• 요청 로깅 필터(`LoggingFilter`) 및 컨텍스트 리스너(`MyContextListener`) 적용 | ✅ 완료 |
 
 <br/>
 
